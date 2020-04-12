@@ -4,11 +4,6 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: '/home',
-  },
-  {
-    path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
@@ -24,8 +19,8 @@ const routes: Routes = [
     loadChildren: () => import('./videos/videos.module').then(m => m.VideosModule)
   },
   {
-    path: 'portafolio',
-    loadChildren: () => import('./portafolio/portafolio.module').then(m => m.PortafolioModule)
+    path: 'portfolio',
+    loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)
   },
   {
     path: 'contact',
